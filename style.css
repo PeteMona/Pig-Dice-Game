@@ -23,7 +23,6 @@ body {
 }
 
 /* LAYOUT */
-
 main {
   position: relative;
   width: 100rem;
@@ -46,7 +45,7 @@ main {
   transition: all 0.75s;
 }
 
-/* ELEMENTS   */
+/* ELEMENTS */
 .name {
   position: relative;
   font-size: 4rem;
