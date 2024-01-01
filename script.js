@@ -71,3 +71,28 @@ btnHold.addEventListener('click', function () {
     player1El.classList.toggle('player--active');
   }
 });
+
+// Reset the game and start a new game
+function resetGame() {
+  scores[0] = 0;
+  scores[1] = 0;
+  currentScore = 0;
+  activePlayer = 0;
+
+  score0El.textContent = 0;
+  score1El.textContent = 0;
+  current0El.textContent = 0;
+  current1El.textContent = 0;
+
+  player0El.classList.remove('player--winner');
+  player1El.classList.remove('player--winner');
+  player0El.classList.add('player--active');
+  player1El.classList.remove('player--active');
+
+  btnRoll.classList.remove('hidden');
+  btnHold.classList.remove('hidden');
+  diceEl.classList.add('hidden');
+}
+
+// Call the resetGame function when the new game button is clicked
+btnNew.addEventListener('click', resetGame);
